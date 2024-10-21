@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 openNav();
                 localStorage.setItem("navbar", "true");
             } else {
-                return;
+                closeNav();
+                localStorage.setItem("navbar", "false");
             }
         });
     }
