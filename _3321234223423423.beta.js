@@ -19,6 +19,7 @@ function openNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
         sidenav.style.width = "250px";
+        localStorage.setItem("navbar", "true");
     }
 }
 
@@ -26,6 +27,7 @@ function closeNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
         sidenav.style.width = "0";
+        localStorage.setItem("navbar", "false");
     }
 }
 
@@ -53,10 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const isOpen = localStorage.getItem("navbar") === "true";
             if (isOpen) {
                 openNav();
-                localStorage.setItem("navbar", "true");
             } else {
                 closeNav();
-                localStorage.setItem("navbar", "false");
             }
         });
     }
