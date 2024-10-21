@@ -3,27 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0000FF">
+    <meta name="description" content="StormX, the best utilities bot for your server.">
+    <meta property="og:image" content="/Assets/assets/StormX.png">
     <link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Assets/css/main.css">
     <link rel="stylesheet" href="/Assets/css/now-ui-kit.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/Assets/assets/logo.png">
-    <script src=https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
     <title>StormX</title>
-        </head>
-        <body>
-        <nav class="navbar navbar-expand-lg bg-transparent">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <script src="_3321234223423423.beta.js"></script>
+    <script>fetchStats()</script>
+    <script>SideNavBar()</script>
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        .navbarside {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .navbarside a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .navbarside a:hover {
+            color: #f1f1f1;
+        }
+
+        .navbarside .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .navbarside {padding-top: 15px;}
+            .navbarside a {font-size: 18px;}
+        }
+
+        /* Hide the toggle button on larger screens */
+        @media (min-width: 992px) {
+            .navbar-toggler {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg bg-transparent">
+            <button class="navbar-toggler toggled" id="toggledButton" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <img src="/Assets/assets/menuIcon.svg" width="20px" height="20px" style="max-width: none !important;">
             </button>
             <img src="/Assets/assets/logo.png" width="50" height="50">
+        
+        
             <div class="collapse navbar-collapse" id="nav   barSupportedContent" style="margin-left: 20px !important">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#features">Features</a>
+                        <a class="nav-link" href="/">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/">Dashboard</a>
@@ -37,9 +96,8 @@
                         Documentation
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/commands.html">Commands</a>
-                        <div class="dropdown-divider"></div>    
-                        <a class="dropdown-item" href="/">Server settings</a>
+                        <a class="dropdown-item" href="/commands">Commands</a>
+                        <div class="dropdown-divider"></div>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -48,9 +106,18 @@
                     <div class="nav-item">
                     <a class="nav-link" href="/">Login</a>
                 </div>
-                <a href="https://discord.com/api/oauth2/authorize?client_id=1172998039112274062&permissions=8&scope=bot%20applications.commands" class="btn login-btn btn-outline-accent my-2 my-sm-0" style="font-size: 10px !important;font-family: poppins !important;">Invite</a>
+                <a href="https://discord.com/api/oauth2/authorize?client_id=1172998039112274062&amp;permissions=8&amp;scope=bot%20applications.commands" class="btn login-btn btn-outline-accent my-2 my-sm-0" style="font-size: 10px !important;font-family: poppins !important;">Invite</a>
             </div>
-</nav>
+        </nav>
+
+    <div class="navbarside" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#features" onclick="closeNav()">Features</a>
+        <a href="#" onclick="closeNav()">Services</a>
+        <a href="#" onclick="closeNav()">Clients</a>
+        <a class="btn login-btn btn-outline-accent my-2 my-sm-0" href="https://discord.com/api/oauth2/authorize?client_id=1172998039112274062&permissions=8&scope=bot%20applications.commands" onclick="closeNav()">Invite</a>
+    </div>
+
 <div class="heading">
 <center><h1 class="display-5 title">StormX Commands</h1></center>
     <div class="footer">
