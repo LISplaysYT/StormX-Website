@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleButton.addEventListener("click", function() {
             const isOpen = localStorage.getItem("navbar") === "true";
             if (isOpen) {
-                closeNav();
-                localStorage.setItem("navbar", "false");
+                openNav();
+                localStorage.setItem("navbar", "true");
             } else {
                 return;
             }
