@@ -30,7 +30,7 @@
 function SideNavBar() {
  const localstorage = localStorage.getItem("navbar")
     if (!localstorage) return;
-    if (localstorage = "true") {
+    if (localstorage === "true") {
         openNav()
     } else {
         closeNav()
