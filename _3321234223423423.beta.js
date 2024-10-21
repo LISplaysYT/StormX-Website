@@ -27,7 +27,7 @@
             const toggleButton = document.getElementById("toggleButton");
             toggleButton.addEventListener("click", openNav);
         });
-function SideNavBar {
+function SideNavBar() {
  const localstorage = localStorage.getItem("navbar")
     if (!localstorage) return;
     if (localstorage = "true") {
