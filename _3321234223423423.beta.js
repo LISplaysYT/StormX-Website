@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Call SideNavBar to set the initial state of the sidebar
     SideNavBar();
 
-    const toggleButton = document.getElementById("toggleButton");
+    const toggleButton = document.getElementById("toggledButton");
     if (toggleButton) {
         toggleButton.addEventListener("click", function() {
             const isOpen = localStorage.getItem("navbar") === "true";
