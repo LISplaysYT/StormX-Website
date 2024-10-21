@@ -19,7 +19,7 @@ function openNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
         sidenav.style.width = "250px";
-        localStorage.setItem("navbar", "true");
+        localStorage.setItem("navbar", "true"); // Save the opened state
     }
 }
 
@@ -27,7 +27,7 @@ function closeNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
         sidenav.style.width = "0";
-        localStorage.setItem("navbar", "false");
+        localStorage.setItem("navbar", "false"); // Save the closed state
     }
 }
 
@@ -40,7 +40,7 @@ function SideNavBar() {
     if (localstorage === "true") {
         openNav();
     } else {
-        return;
+        closeNav(); // Ensure the nav is closed if not opened before
     }
 }
 
@@ -53,11 +53,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (toggleButton) {
         toggleButton.addEventListener("click", function() {
             const isOpen = localStorage.getItem("navbar") === "true";
-            if (isOpen) {
+            if (!isOpen) { // Only open if it's not already open
                 openNav();
-            } else {
-                closeNav();
-            }
+            } // If it's open, do nothing
         });
     }
 });
