@@ -19,7 +19,6 @@ function openNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
         sidenav.style.width = "100%";
-        localStorage.setItem("navbar", "true");
     }
 }
 
@@ -27,7 +26,6 @@ function closeNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
         sidenav.style.width = "0";
-        localStorage.setItem("navbar", "false");
     }
 }
 
