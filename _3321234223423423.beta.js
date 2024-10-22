@@ -31,24 +31,9 @@ function closeNav() {
     }
 }
 
-// Function to determine the initial state of the sidebar
-function SideNavBar() {
-    const localstorage = localStorage.getItem("navbar");
-    if (!localstorage) return; // Exit if no value found
-
-    // Open or close the sidebar based on local storage value
-    if (localstorage === "true") {
-        openNav();
-    } else {
-        closeNav(); // Ensure the nav is closed if not opened before
-    }
-}
-
 // Add event listener to the button after the DOM has loaded
 document.addEventListener("DOMContentLoaded", function() {
-    // Call SideNavBar to set the initial state of the sidebar
-    SideNavBar();
-
+    
     const toggleButton = document.getElementById("toggledButton");
     if (toggleButton) {
         toggleButton.addEventListener("click", function() {
