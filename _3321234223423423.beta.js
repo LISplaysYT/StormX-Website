@@ -18,8 +18,8 @@ async function fetchStats() {
 function openNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
-        sidenav.style.width = "250px";
-        localStorage.setItem("navbar", "true"); // Save the opened state
+        sidenav.style.width = "100%";
+        localStorage.setItem("navbar", "true");
     }
 }
 
@@ -27,7 +27,7 @@ function closeNav() {
     const sidenav = document.getElementById("mySidenav");
     if (sidenav) {
         sidenav.style.width = "0";
-        localStorage.setItem("navbar", "false"); // Save the closed state
+        localStorage.setItem("navbar", "false");
     }
 }
 
@@ -52,10 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.getElementById("toggledButton");
     if (toggleButton) {
         toggleButton.addEventListener("click", function() {
-            const isOpen = localStorage.getItem("navbar") === "true";
-            if (!isOpen) { // Only open if it's not already open
-                openNav();
-            } // If it's open, do nothing
+            openNav();
         });
     }
 });
